@@ -4,24 +4,26 @@ public class Average
 {
     public static void Main()
     {
-        double average, markDouble, sum=0, c=0;
-        string s;
+        double average, markDouble, sum = 0, markCounter = 0;
+        string markString;
 
         Console.Write("Insert a mark: ");
-        s=Console.ReadLine();	// we read the mark as string to check the word "end"	 
+        markString = Console.ReadLine();   /*we read the mark as a string to 
+        check the word "end"*/
 
-        while(s!="end")
-        {// if the mark isn't an end then we pass it to double to work with it
-            markDouble=Convert.ToDouble(s);
-            c++;   //counter of numbers
-            sum+=markDouble;  // sum of all the notes
+        while(markString != "end")    /*while user does not introduce the word 
+        "end" we convert it to double to work with it*/
+        {
+            markDouble = Convert.ToDouble(markString);
+            markCounter++;   //counter for marks given by user
+            sum += markDouble;    //sum of all the marks is stored in variable
             Console.Write("Insert a mark: ");
-            s=Console.ReadLine();
+            markString = Console.ReadLine();
         }
 
-        if(c!=0)
+        if(markCounter != 0)    //average is calculated if user inserts marks
         {
-            average=sum/c;  //calculate the average
+            average = sum / markCounter;
             Console.WriteLine("The average is {0}.",average);
         }
     }
