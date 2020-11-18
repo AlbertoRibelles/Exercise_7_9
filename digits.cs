@@ -20,13 +20,13 @@ class digits
             if (input != 0)
             {
                 if (input/10 == 0)
-                    singleDigit ++;  // the number only has 1 digit
+                    singleDigit ++;
                 else if (input/100 == 0)
-                    doubleDigit ++;  // the number has 2 digits
+                    doubleDigit ++;
                 else if (input/1000 == 0)
-                    tripleDigit ++;  // the number has 3 digits
+                    tripleDigit ++;
                 else
-                    multipleDigit++;  // the number has more than 3 digits
+                    multipleDigit++;
             }
         }
         Console.WriteLine("one: {0} two: {1} three: {2} more: {3}", 
