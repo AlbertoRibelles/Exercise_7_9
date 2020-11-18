@@ -6,6 +6,7 @@ class digits
     {
         //counters for numbers depending on how many digits they have
         int singleDigit = 0, doubleDigit = 0, tripleDigit = 0, multipleDigit = 0;
+        int input;
         string number;
         
         Console.Write("Insert a number: ");
@@ -16,7 +17,7 @@ class digits
         while (number!="end")
         {
             //We convert from string to int to work with the numbers
-            int input = Convert.ToInt32(number);
+            input = Convert.ToInt32(number);
             
             if (input != 0)
             {
